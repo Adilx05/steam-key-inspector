@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Steam Key Inspector",
+  "version": "1.0.0",
+  "description": "Detects Steam game/package information from register key responses.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://store.steampowered.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/account/registerkey*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
