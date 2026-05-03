@@ -97,3 +97,86 @@
     background: color-mix(in srgb, Canvas 82%, #1d4ed8 18%);
   }
 }
+
+.ski-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.ski-history {
+  margin-top: 12px;
+  border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  padding-top: 10px;
+}
+
+.ski-history-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ski-history-list {
+  margin-top: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  display: grid;
+  gap: 6px;
+}
+
+.ski-history-item {
+  text-align: left;
+  border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  padding: 7px 8px;
+  cursor: pointer;
+}
+
+.ski-history-item:hover:not(:disabled) {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.ski-history-item:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ski-history-title {
+  font-weight: 600;
+}
+
+.ski-history-meta {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.ski-history-empty {
+  opacity: 0.8;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.ski-clear-btn {
+  margin-top: 8px;
+}
+
+.ski-panel.ski-flash {
+  animation: skiFlash 0.7s ease-out;
+}
+
+@keyframes skiFlash {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, #22c55e 55%, transparent); }
+  100% { box-shadow: 0 0 0 14px transparent; }
+}
